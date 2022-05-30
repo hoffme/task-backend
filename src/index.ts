@@ -1,16 +1,15 @@
-import AppDataSource from "./data-source";
+import AppDataSource from './data-source';
 
-import TasksController from "./controllers/tasks";
+import TasksController from './controllers/tasks';
 
-import TaskRepository from "./repositories/task";
+import TaskRepository from './repositories/task';
 
-import runServer from "./server";
+import runServer from './server';
 
-AppDataSource
-    .initialize()
-    .then(() => {
-        TasksController.repository = new TaskRepository(AppDataSource);
+AppDataSource.initialize()
+  .then(() => {
+    TasksController.repository = new TaskRepository(AppDataSource);
 
-        runServer();
-    })
-    .catch(console.error)
+    runServer();
+  })
+  .catch(console.error);

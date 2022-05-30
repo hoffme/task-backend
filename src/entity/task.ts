@@ -1,15 +1,15 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity()
 export class TaskEntity {
-    @PrimaryGeneratedColumn()
-    id: number
+  @PrimaryGeneratedColumn()
+  id: number;
 
-    @Column({ type: 'text' })
-    title: string
+  @Column({ type: 'text' })
+  title: string;
 
-    @Column({ type: 'bool' })
-    completed: boolean
+  @Column({ type: 'bool' })
+  completed: boolean;
 }
 
 export default TaskEntity;
